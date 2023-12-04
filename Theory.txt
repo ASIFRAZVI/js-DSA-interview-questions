@@ -1,0 +1,2002 @@
+INTERVIEW PREPRATION FINAL DOCUMENT
+Prepared by –Mohammed Asif Raza (Backend Developer)
+1: What is difference between let and const? What is the difference between let and var?
+Ans- var used in old js code and it have global scope and const introdused in Es6 js and 
+it is a block scope.
+2 : what is output of this function
+function sample (){
+for (let i=0; i<=5;i++){
+setTimeout (() => Console.log(i), 1000 );
+}
+}
+Ans-- output will be 0-5 number it prints 1 by 1 after 1 sec.
+3 : what is output of this
+SetTimeout(()=>{
+Console.log("a");
+},2000)
+Console.log("b");
+Ans- b and after 2 sec a.
+4: how can you print a first and b later with. You are not allowed to use any extra 
+setTimeouts?
+Ans- I ll use promises like async await.
+6 : what is process.nextTick ?
+Ans- in process.netTick we provide callback fn which added in quue for eg we have 3 fn 
+in which 2nd fn is process.nextTick so then o/p will be 1 ffn and 3rd fn and then 2nd o/p 
+or fn will be executed.
+7: how can you check if a variable is an array?
+Ans- we can use Array.isArray(); for cheack variable in array.
+8.: Do You know Sql ? What is difference between truncate and delete?
+Ans- SQL (Structured Query Language) is typically used to interact with databases and 
+perform operations on data.
+• DELETE removes specific rows from a table based on a condition.
+• TRUNCATE removes all rows from a table, resetting it to its initial state.
+9. Do you have any about indexing the table ?
+Ans-Indexing a table in a database involves creating a data structure that improves the 
+speed and efficiency of data retrieval operations on that table.
+10. What is output of this ?
+SetImmidiate (()=>{
+Console.log("first")
+})
+SetTimeout (()=>{
+Console.log("second")
+})
+Console.log("third");
+Ans—third ,second, first.
+11. Difference between SetImmidiate and Process.nexttick?
+Ans-- setImmediate schedules a callback to be executed in the next iteration of the event 
+loop, after I/O events, while process.nextTick schedules a callback to be executed 
+immediately after the current operation completes, before I/O events.
+12. What is difference between promise and call back?
+Ans--
+Callbacks are functions passed as arguments to other functions, used for asynchronous 
+operations, while Promises provide a more structured way to handle asynchronous 
+operations, offering better error handling and readability.
+13. What is output ?
+Let a=New Promise((resolve,reject)=>{
+reject ({ msg: 'Something went wrong' ))
+})
+a.then(ressolve=>{console.log{ressolve}})
+.catch(err=>{console.log(err.msg) })
+Ans-- Something went wrong
+Explanation-- In this code, a Promise is created and immediately rejected with the 
+specified message. The .catch handler is triggered when the promise is rejected, printing 
+the error message to the console.
+14. what is output ?
+what is output ?
+await delay(6000)
+SetTimeout (()=>{
+console.log("first")
+},10000)
+console.log("second");
+Ans-- O/P is after 6 sec it print "second" and then after 10 sec it prints "first".
+15. What is function definition ?
+Ans-- A function is a block of code that perform specific task.
+16. Difference between let, var and const?
+Ans-- var is global scole so var is globally accesable every whare in code but let and 
+const is blockscope and we cannot access out side of block and const used for store 
+constant variables..
+17. Hosting, callbacks, ES6 features?
+Ans--
+ Hosting: JavaScript's habit of moving variable and function declarations to the top 
+of their scope, making them available throughout the code.
+• Callbacks: Functions given as inputs to other functions, used to do things after an 
+action is complete, like handling data after it's retrieved.
+• ES6 Features: Modern improvements to JavaScript like shorter function syntax, 
+better ways to handle variables, classes for easier object-oriented programming, 
+and other helpful enhancements
+18. Difference between array.map and array.filter?
+Ans- the map is use callback and gives new value but original array is unchanged and 
+resulting array have length as original array ....V/S
+array.filter is creates an new array with all element from original array and it returns the 
+boolean value and resulting array may be chabge in length and not like a original array.
+19. How to find the length of an object
+Ans-- In JavaScript, objects do not have a built-in length property like arrays do. 
+However, you can find the number of properties (key-value pairs) in an object using the 
+Object.keys() method and then getting the length of the resulting array.
+example:
+const myObject = { a: 1, b: 2, c: 3 };
+const objectLength = Object.keys(myObject).length;
+console.log(objectLength); // Output: 3
+20. What are promises? 3 states of promises.
+Ans-- promises used handle the errors in code the promises take two arguments either 
+it is resolve or reject if code if fine it execute the code otherwise it goes to reject section.
+ Threee states are resolve, reject, pending.
+21. Why do we use promises over callbacks and why use await and async?
+Ans--
+Promises are used over callbacks because they provide better structure and readability for 
+handling asynchronous operations, avoiding callback hell. await and async are used to 
+simplify working with promises by making asynchronous code look more like synchronous 
+code, enhancing readability and reducing callback complexity.
+22. What is call back hell?
+Ans-- Callback hell refers to the complex and hard-to-read nesting of multiple callback 
+functions in asynchronous JavaScript code.
+23. What is the temporal dead zone?
+Ans-- The temporal dead zone is the time when you can't use a variable before you declare 
+it in your code.
+24. Const person=
+{
+Name:p1,
+Age:24
+}
+Can we change age to 25? 
+Can we do person.push(age:25);
+Ans-- * Yes, you can change the value of the Age property to 25 like this:
+Javascript.
+person.Age = 25;
+* Can we do person.push(age: 25);? No, the push method is used for arrays, not for 
+objects. Since person is an object, you can directly assign a new value to its Age property as 
+shown above.
+Explanation-- The const keyword is used to declare the person variable as a constant. This 
+means that the reference to the object itself (person) cannot be changed to point to a 
+different object. However, the properties inside the object (like Name and Age) can still be 
+modified.
+25. Write a function to generate random number between 10 and 99?
+Ans-- function generateRandomNumber() {
+ return Math.floor(Math.random() * 90) + 10;
+}
+const randomNumber = generateRandomNumber();
+console.log(randomNumber);
+26. Difference between settimeout, setinterval setimmediate?
+Ans-- setTimeout: Executes a function after a specified delay.
+setInterval: Repeatedly executes a function with a fixed time interval between each 
+execution.
+setImmediate: Executes a function in the next iteration of the event loop after the current 
+operation completes.
+27. Difference between null and undefined?
+Ans-- null: Explicitly assigned absence of any value.
+undefined: Default value when a variable or property is declared but not initialized.
+28. Difference between undeclared and undefined?
+Ans-- Undeclared: A variable or identifier that has not been created or defined in the code.
+Undefined: A variable that has been declared but has not been assigned a value, or an 
+object property that does not exist.
+29. Difference between ‘==’ and’ ===’ ?
+Ans-- == not cheaks the data type also it is coparisson operator but === is strict which 
+also cheak the data type.
+30. Spread and rest operators
+[a,...b,]=[1,2,3,4,5] What are a and b values?
+Ans-- split used to split the itarable such as arrray and strings into a indudual 
+element.V/S rest used to collect multiple element in array. a Value is 1 and b value is 
+2,3,4,5
+31. const fun = () => arguments.length;
+console.log(fun(1,2)); What is the output?
+Ans-- O/P will be 2
+Explanation-- The arguments object is available in regular function expressions and 
+contains the arguments passed to the function. In this case, since you're calling fun(1,2), 
+the arguments.length will correctly return 2.
+32. Let str=”JavaScript=Node=Express”; replace “=” with “.”?
+Ans-- let str = "JavaScript=Node=Express";
+let replacedStr = str.replace(/=/g, "."); //this is main part I used replase method
+console.log(replacedStr);
+33. Reverse the string given str=”India” to "aidnI"
+Ans-- let str="India";
+let str1=str.split("").reverse().join("")
+console.log(str1)
+34. Write a function to check if the given number "n" exists in the array.
+If present remove the number from the array , return the remaining array excluding the 
+number else print element not present.
+Example Input 1
+arr=[7,8,9,10] , n=8
+Output
+arr=[7,9,10]
+Ans-- function removeNumberFromArray(arr, n) {
+ const index = arr.indexOf(n);
+ 
+ if (index !== -1) {
+ arr.splice(index, 1);
+ } else {
+ console.log("Element not present");
+ }
+ return arr;
+}
+const array = [7,8,9,10]
+const numberToRemove = 8;
+const resultArray = removeNumberFromArray(array, numberToRemove);
+console.log(resultArray);
+35. When do we use async await ?
+Ans-- We use async/await when working with asynchronous operations in JavaScript to 
+write asynchronous code in a more readable and synchronous-like manner.
+36. What is the reason behind writing await inside async function only?
+Ans-- await can only be used inside an async function because it pauses the function's 
+execution until the awaited promise resolves.
+37. What will the output of this be?
+async fun fun1(){
+console.log('a');
+console.log('b');
+await setTimeout(() => console.log('c'), 1000)
+await setTimeout(() => console.log('d'), 0)
+console.log('e');
+}
+fun1()
+Explain the reason behind the answer?
+Ans-- o/p will be a, b ,e, d,c bcz in settime out the await is not working.
+Explaination-- you used await with setTimeout, which is a function that doesn't return a 
+Promise. Since await expects a Promise to be returned, using it with setTimeout directly 
+won't have the desired effect. Instead of pausing the execution of the function, it will 
+behave as if you're trying to use await on a non-Promise value, effectively not pausing the 
+function.
+To correctly use await, you need to use functions that return Promises. If you want to use 
+await with functions that don't inherently return Promises (like setTimeout), you need to 
+wrap them in a Promise constructor to properly create a Promise-based asynchronous 
+operation, as shown in the previous response. This way, you're explicitly defining the 
+behavior of the asynchronous operation and making it compatible with await.
+38. To resolve and print in proper manner we use promises
+Ans-- async function fun1() {
+ console.log('a');
+ console.log('b');
+ 
+ await new Promise(resolve => setTimeout(() => {
+ console.log('c');
+ resolve();
+ }, 1000));
+ await new Promise(resolve => setTimeout(() => {
+ console.log('d');
+ resolve();
+}, 0));
+ console.log('e');
+}
+fun1();
+39. What are callback? What is Callback hell? Can you give an example of callback hell?
+Ans.-- A callback is a function you give to another function to be executed when that 
+function finishes its work.
+Callback hell occurs when you have many nested callbacks, making the code hard to read 
+and manage
+Eg—for hell
+doSomething(function(result) {
+ doAnotherThing(result, function(newResult) {
+ doYetAnotherThing(newResult, function(finalResult) {
+ // ... and so on
+ });
+ });
+});
+40. How are promises more superior than callbacks? How do promises solve the issue of 
+callback hell?
+Ans-- Promises provide better readability and error handling compared to callbacks. They 
+solve callback hell by allowing asynchronous operations to be chained in a more linear and 
+readable manner.
+With promises:
+• Readability: Promises use .then() to chain asynchronous operations, making the 
+code easier to read and follow.
+• Error Handling: Promises have built-in error handling through .catch(), 
+simplifying error management and making it less error-prone compared to 
+traditional callback error handling.
+• Avoiding Callback Hell: Promises help avoid callback hell by allowing you to chain 
+asynchronous operations without excessive nesting, leading to more organized and 
+maintainable code
+Eg-- doSomething()
+ .then(result => doAnotherThing(result))
+ .then(newResult => doYetAnotherThing(newResult))
+ .then(finalResult => {
+ // ... and so on
+ })
+ .catch(error => {
+ // Handle errors here
+ });
+41. What were the 10 new features that were introduced in ES6? Explain each one of 
+them in detail? You will be asked questions on each example you give?
+Ans--
+1.let and const: Introduced new variable declaration keywords, let and const, for blockscoped variables. let allows variables to be reassigned, while const creates read-only 
+variables with a constant value.
+2. Arrow Functions: Provide a concise syntax for writing function expressions. They use 
+the => arrow notation and have a lexically bound this context.
+3.Template Literals: Enhanced string literals that support multi-line strings and string 
+interpolation using ${} to embed expressions within strings.
+4.Destructuring Assignment: Enables extracting values from arrays or objects into 
+individual variables in a concise and expressive manner.
+5.Spread Syntax: Allows the elements of an array or object to be expanded into another 
+array or object.
+6.Default Parameters: Enables setting default values for function parameters, which are 
+used when the argument is not explicitly passed or is undefined.
+7.Classes: Introduced a new syntax for creating constructor functions and managing 
+prototype-based inheritance, making it easier to create and extend classes.
+8.Promises: Offers a better way to handle asynchronous operations and avoids the 
+"callback hell" by providing better error handling and chaining.
+9.Async/Await: Built on top of Promises, it provides a more synchronous-looking code 
+structure for handling asynchronous operations.
+10.0.what is DOM manuplation?
+Ans--
+• DOM: The Document Object Model represents the structure of a webpage as a tree 
+of objects, where each object corresponds to an HTML element, its properties, and 
+content.
+• Manipulation: DOM manipulation involves using JavaScript to modify the DOM 
+elements and their properties dynamically.
+• Selection: You can select DOM elements using methods like getElementById, 
+querySelector, or getElementsByClassName.
+• Content Modification: JavaScript lets you change the content within HTML 
+elements, like updating text or changing attribute values.
+• Element Creation: You can create new HTML elements using the createElement
+method, and then insert them into the DOM using methods like appendChild or 
+insertBefore.
+• Element Removal: JavaScript allows you to remove existing elements using 
+methods like removeChild.
+• Event Handling: You can attach event listeners to DOM elements to respond to user 
+interactions like clicks, inputs, and more.
+• Dynamic Updates: DOM manipulation enables creating dynamic web applications, 
+where changes to the DOM reflect user actions and input, resulting in a smoother 
+user experience without full page reloads.
+• Responsive UI: By dynamically updating content based on user interactions, you 
+can create more interactive and responsive user interfaces.
+• Client-Side Interactivity: DOM manipulation plays a crucial role in creating rich 
+client-side interactions and applications, as seen in modern web applications and 
+single-page applications (SPAs).
+10.Modules: Allows developers to use import and export statements to create and 
+manage reusable code modules.
+42. Call, Apply, Bind. When to use what ? Can you give an example?
+Ans-- these methods help you control what this refers to inside a function and how you 
+pass arguments to it.
+• call(): Use it when you want to call a function immediately with a specific context 
+(object) and individual arguments.
+• apply(): Use it similarly to call(), but when you have arguments in an array.
+• bind(): Use it to create a new function that is "bound" to a specific context (object), 
+ready to be called later with arguments.
+Eg--
+const person = { name: "Bob" };
+function greet(message) {
+ console.log(`${message}, ${this.name}`);
+}
+greet.call(person, "Hey"); // Output: Hey, Bob
+greet.apply(person, ["Hi"]); // Output: Hi, Bob
+const boundGreet = greet.bind(person);
+boundGreet("Hello"); // Output: Hello, Bob
+43. What are different ways to store data in browser? Explain each one of them and 
+when should we use what?
+Ans-- local storage, cache, cookie storage.
+44. What are generator function in javascript ? How are they different from normal 
+function?
+Ans--
+Generator functions in JavaScript are special types of functions that can be paused and 
+resumed during their execution, allowing for the generation of a series of values over time.
+Difference from normal functions: Normal functions run to completion and return a single 
+value, while generator functions can yield multiple values over time, allowing pausing and 
+resuming of their execution.
+45. Difference between arr.foreach, array.map and array.filter? Take example input array 
+and explain the output which you will get?
+Ans- forEach: Loop through array elements and perform an action for each element.
+• map: Transform each element of an array and create a new array with transformed 
+values.
+• filter: Create a new array with elements that satisfy a specific condition.
+1.const numbers = [1, 2, 3];
+numbers.forEach(num => console.log(num * 2)); // Output: 2, 4, 6
+2. const numbers = [1, 2, 3];
+const doubledNumbers = numbers.map(num => num * 2); // doubledNumbers: [2, 4, 6]
+3. const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(num => num % 2 === 0); // evenNumbers: [2, 4]
+1.arr.forEach:
+Definition: forEach is used to iterate over each element in an array and apply a provided 
+function to each element without creating a new array. It's mainly used for performing 
+actions on elements.
+2.array.map:
+Definition: map creates a new array by applying a provided function to each element in the 
+input array and collecting the results. It transforms the original elements into a new form.
+3.array.filter:
+Definition: filter creates a new array containing elements that pass a provided test function. 
+It filters out elements based on a specified condition.
+46. What is the use of arr.reduce? Explain with an example.?
+Ans-- arr.reduce is used to combine values in an array into one value using a specific 
+operation. It's like folding a piece of paper to get a single result.
+47. what will the output (true or false) of the following be?Explain why?
+console.log(null === undefined)
+console.log(null == undefined)
+Ans-- console.log(null === undefined) Output: false Explanation: The strict equality 
+operator (===) checks for both value and type equality. null and undefined are of different 
+types, so strict equality between them is false.
+• console.log(null == undefined) Output: true Explanation: The loose equality 
+operator (==) performs type coercion, and when comparing null and undefined, 
+they are considered equal due to type coercion rules.
+48. What is event bubbling and event capturing (Event Propagation)? what is the 
+difference between them? Can you give a code example to explain how you can use 
+event bubbling ?
+Ans-- Event bubbling and event capturing are two phases of the event propagation process 
+in the DOM:
+• Event Bubbling: In this phase, when an event occurs on a specific DOM element, the 
+event starts at that element and bubbles up to the root of the DOM tree, triggering 
+event handlers on parent elements.
+• Event Capturing: In this phase, the event starts at the root of the DOM tree and 
+trickles down to the target element, triggering event handlers on ancestor elements.
+Difference: Event bubbling moves from the target element up to the root, while event 
+capturing moves from the root down to the target element.
+Eg-- <div id="outer">
+ <div id="inner">
+ Click Me
+ </div>
+</div>
+<script>
+document.getElementById("outer").addEventListener("click", () => {
+ console.log("Outer div clicked");
+}, false); // Use `false` for event bubbling
+document.getElementById("inner").addEventListener("click", () => {
+ console.log("Inner div clicked");
+}, false); // Use `false` for event bubbling
+</script>
+If event false bubling not used If you click the "Inner div," you'll see both "Inner div clicked" 
+and "Outer div clicked" logged in the console due to event bubbling.
+If used false then if you click the "Inner div," event bubbling will occur, triggering the "Inner 
+div clicked" handler first and then the "Outer div clicked" handle.
+49. What is function currying? Can you create a curried function and explain?
+Ans—curring is whare each fn is arranged in lexical scope. It depends first order function.
+Eg-- function multiply(a) {
+ return function(b) {
+ return a * b;
+ };
+}
+const double = multiply(2);
+console.log(double(5)); // Output: 10 Output: 10
+In this example, multiply is a curried function. You give it the first number, and it returns a 
+new function that multiplies it by any number you provide later.
+50. What is an IIFE (Immediately Invoked function expression)? Can you give an 
+example?
+Ans-- An IIFE (Immediately Invoked Function Expression) is a JavaScript function that is 
+defined and executed immediately after its creation.
+Eg-- (function() {
+ console.log("This is an IIFE.");
+})();
+Explanation-- the function is defined within the parentheses and immediately invoked with 
+the final pair of parentheses. This can be useful for creating a private scope for variables 
+and functions to avoid polluting the global scope.
+Soo---
+An IIFE is a JavaScript function that's created and run right away. It's useful for keeping variables 
+and functions private to avoid cluttering the global space.
+51. Explain the different ways of creating object in javascript? Explain all the 3 ways.
+Ans-- Object Literal,
+Constructor Function,
+Object.create().
+….................................................
+Object Literal:
+An object created using curly braces {} with key-value pairs.
+const person = {
+ name: "Alice",
+ age: 30,
+};
+Constructor Function:
+A function used as a blueprint to create objects with shared properties and methods.
+function Car(make, model) {
+ this.make = make;
+ this.model = model;
+ this.drive = function() {
+ console.log("Driving the", this.make, this.model);
+ };
+}
+const myCar = new Car("Toyota", "Camry");
+Object.create():
+Creating an object by specifying its prototype explicitly.
+const personPrototype = {
+ greet: function() {
+ console.log("Hello!");
+ },
+};
+const alice = Object.create(personPrototype);
+alice.greet();
+52. What are Object Prototype Methods?
+Ans-- Object prototype methods are special functions that all objects of a certain type can 
+use to perform common actions.
+53. What is object chaining in javascript? Can you create functions to explain object 
+chaining better?
+Ans-- Object chaining in JavaScript refers to the practice of chaining multiple method calls 
+on the same object, allowing concise and sequential operations.
+Eg--
+const calculator = {
+ value: 0,
+ add: function(num) {
+ this.value += num;
+ return this; // Return the object for chaining
+ },
+ subtract: function(num) {
+ this.value -= num;
+ return this; // Return the object for chaining
+ },
+ multiply: function(num) {
+ this.value *= num;
+ return this; // Return the object for chaining
+ },
+ getValue: function() {
+ return this.value;
+ }
+};
+const result = calculator.add(5).multiply(2).subtract(3).getValue();
+console.log(result); // Output: 7
+54. What is the main difference between fat arrow function and normal function?
+Ans-- The main difference is that fat arrow functions (=>) do not have their own this
+context, while normal functions do. Also don’t need to give the name this fn is introduced in
+js ES6 version.
+55. Can you give an example to explain how "this" works differenetly with fat arrow 
+function and normal function?
+Ans--
+const obj = {
+ name: "Alice",
+ normalFunc: function() {
+ console.log("Hello, " + this.name);
+ },
+ arrowFunc: () => {
+ console.log("Hello, " + this.name);
+ }
+};
+obj.normalFunc(); // Outputs: Hello, Alice
+obj.arrowFunc(); // Outputs: Hello, undefined
+Explanation-- normalFunc correctly accesses the name property of the obj, while arrowFunc
+does not have its own this and can't access the name property.
+56. What are the advantages of Axios vs other competitors( like fetch, http, got etc)? 
+Why is axios so widely used?
+Ans-- Axios offers simplified syntax, built-in support for handling request and response 
+data, and better browser compatibility, making it widely used compared to competitors 
+like Fetch and others.
+57. What are closures? Explain with an example?
+Ans-- A closure in JavaScript refers to the ability of a function to "remember" and access its 
+surrounding scope's variables even after the function has finished executing.
+Eg--
+function outerFunction() {
+ const outerVar = "I'm from outer";
+ function innerFunction() {
+ console.log(outerVar); // Inner function has access to outerVar
+ }
+ return innerFunction;
+}
+const inner = outerFunction();
+inner(); // Outputs: I'm from outer
+58. What is the output of this console.log(0.1 + 0.2). Why is it not 0.3?
+Ans-- The output is 0.30000000000000004 due to the way floating-point arithmetic is 
+represented in computers, which can sometimes lead to precision errors
+• And due to the limitations of floating-point arithmetic in JavaScript.
+• It is specific in some case only
+59. What will be the output of this console.log((0.2+ 0.3) === 0.5)
+Ans-- The output will be true because (0.2 + 0.3) will be equal to 0.5, resulting in a 
+comparison of true with 0.5 === 0.5. here limitations of floating-point arithmetic in 
+JavaScript. Not working.
+60. How to iterate inside and object and print all the values inside it without the keys? 
+Give a code example?
+Ans-- using fo in loop or object.values().eg=const myObject = {
+name: 'Asif',
+age: 22,
+occupation: 'Engineer'
+};
+const values = Object.values(myObject);
+console.log(values);
+61. What is NaN property in JavaScript?
+Ans--
+NaN in JavaScript stands for "Not-a-Number" and is a special value representing an 
+undefined or unrepresentable value resulting from invalid mathematical operations.
+62. Explain pass by value and pass by reference? Give code example of how you would 
+pass by reference in javascript?
+Ans--
+Pass by value: Copies the actual value of a variable when passing it to a function. Pass by 
+reference: Passes a reference (memory address) to the variable when passing it to a 
+function.
+Eg---
+const originalArray = [1, 2, 3];
+function modifyArray(arr) {
+ arr.push(4);
+}
+modifyArray(originalArray);
+console.log(originalArray); // Output: [1, 2, 3, 4]
+62. Explain “this” keyword?
+Ans--
+The "this" keyword in JavaScript refers to the current object or context in which the code is 
+being executed.
+63. What is memoization in javascript? Can you give a code example implementing the 
+same?
+Ans--
+Memoization in JavaScript is a technique used to optimize functions by caching their results 
+based on the input parameters, which helps avoid unnecessary calculations when the same 
+inputs are used again.
+Eg--
+function memoizedSquare(n) {
+ if (!memoizedSquare.cache) {
+ memoizedSquare.cache = {};
+ }
+ if (memoizedSquare.cache[n]) {
+ console.log("Fetching from cache");
+ return memoizedSquare.cache[n];
+ } else {
+ console.log("Calculating square");
+ const result = n * n;
+ memoizedSquare.cache[n] = result;
+ return result;
+ }
+}
+console.log(memoizedSquare(4)); // Outputs: Calculating square \n 16
+console.log(memoizedSquare(4)); // Outputs: Fetching from cache \n 16
+64. What is the data type of variables in JavaScript?
+Ans--
+JavaScript has several data types including number, string, boolean, object, function, 
+undefined, and null
+Variable—temporvory or short time memory.
+65. What are escape characters? Why are they used? Give code example.
+Ans--
+Escape characters in programming are special characters preceded by a backslash () used 
+to represent characters that are difficult or impossible to type directly in a string, like 
+newline or quotes.
+Eg-- const message = "This is a \"quoted\" text.";
+console.log(message); // Output: This is a "quoted" text.
+66. What is break and continue statements? How are they different?
+Ans-- break will stop for exit from loop contineu is ignore that value.
+67. What are anonymous functions in js? Give an example?
+Ans-- Anonymous functions in JavaScript are functions that are defined without a name 
+and can be used directly where they're created.
+Eg-- const add = function(x, y) {
+ return x + y;
+};
+console.log(add(2, 3)); // Output: 5
+In this example, the add function is an anonymous function assigned to the variable 
+add, allowing it to be used like any other function.
+68. What's the difference between event.preventDefault() and event.stopPropagation() 
+methods in JavaScript?
+Ans--
+event.preventDefault used to avoid going to default url and auto refreshing and auto 
+submiting of forms..
+event.stopPropagation() is a JavaScript method that prevents an event from bubbling up 
+the DOM tree, stopping it from triggering parent elements' event listeners.
+69. What are higher order function ? Explain with code example.
+Ans--
+Higher-order functions in JavaScript are functions that can accept other functions as 
+arguments or return functions.
+Eg--
+function operation(x, y, func) {
+ return func(x, y);
+}
+function add(a, b) {
+ return a + b;
+}
+function subtract(a, b) {
+ return a - b;
+}
+console.log(operation(5, 3, add)); // Output: 8
+console.log(operation(5, 3, subtract)); // Output: 2
+In this example, the operation function is a higher-order function that takes two numbers 
+and a function as arguments and uses that function to perform an operation on the 
+numbers.
+70. For more refer
+1.0----- https://www.codingninjas.com/studio/library/javascript-interview-questionsand-answers
+js part 1.1-- https://www.mygreatlearning.com/blog/javascript-interview-questions/
+js part 2-- https://www.interviewbit.com/javascript-interviewjs part 3---- https://www.interviewbit.com/javascript-cheat-sheet
+js part 4--- https://www.interviewbit.com/javascript-mcq
+js part 5--ES6-- https://www.interviewbit.com/es6-interview-questions
+js parcties set--- https://www.interviewbit.com/technical-interview-questions
+js part 6-- https://www.javatpoint.com/javascript-interview-questions
+js part 7---- https://github.com/sudheerj/javascript-interview-questions
+71. for SQl refer these links
+SQL interview questions and answers (w3schools.blog)
+sql imp question----- https://www.mygreatlearning.com/blog/sql-interview-questions
+sql imp question-----
+https://www.codingninjas.com/studio/library/sql-interview-questions
+For sequalize----- Sequelize - Javatpoint
+72. What are the advantages of Node Js?
+Ans--
+Asynchronous and non-blocking I/O operations, leading to high scalability and 
+performance.
+Single programming language (JavaScript) for both client-side and server-side 
+development.
+Vast and active open-source community with a wide range of libraries and modules 
+available.
+Fast execution and lightweight, making it suitable for real-time applications.
+Cross-platform compatibility, running on various operating systems.
+Ideal for building microservices and scalable network applications.
+Easy sharing of code between the server and the client.
+NPM (Node Package Manager) provides a rich ecosystem of packages and 
+dependencies.
+Simplified development and maintenance due to code reusability.
+Well-suited for building modern, data-intensive, and event-driven applications.
+72. What is module.exports ?
+Ans--
+module.exports` is a special object in Node.js that allows you to export functions, 
+objects, or values from one module so that they can be imported and used in other 
+modules within your application. It is the primary mechanism used for creating reusable 
+code and organizing the codebase into smaller, manageable parts.
+73. what are default exports?
+Ans--
+.In JavaScript and Node.js, default exports allow a module to export a single value as the 
+default export. Unlike named exports, which allow multiple values to be exported from a 
+module, default exports are intended to represent the main value or functionality that a 
+module provide.
+74. What is cors?
+Ans--
+CORS stands for Cross-Origin Resource Sharing. It is a security feature implemented by 
+web browsers to control and restrict web pages from making requests to a different 
+domain than the one that served the web page. In simple terms, CORS is a mechanism 
+that enables web servers to declare which origins (domains) are allowed to access their 
+resources.
+75. What are REST APIs? How does it work?
+Ans--
+REST APIs (Representational State Transfer Application Programming Interfaces) are a 
+set of rules and conventions that enable communication between different software 
+applications over the internet. They allow systems to interact with each other using 
+standard HTTP methods like GET, POST, PUT, DELETE, etc.
+76. What is Event loop?
+Ans--
+The event loop is a fundamental part of Node.js that allows it to handle asynchronous 
+operations efficiently. It is a continuous loop that constantly checks for pending events, 
+such as I/O operations or timers, and executes their associated callback functions.
+77. What is expressJS?
+Ans--
+Express.js is a popular and lightweight web application framework for Node.js. It 
+simplifies the process of building web applications and APIs by providing a set of 
+features and tools to handle routing, middleware, HTTP requests, and responses.
+78. Node js is single threaded or multithreaded?
+Ans--
+Node.js is single-threaded.
+79. If node js is single threaded then how does it handle concurrency?
+Ans--
+Node.js uses an event-driven, non-blocking architecture with asynchronous callbacks to 
+handle concurrency while running on a single thread.
+80. What are the different Http methods? Explain when to use what?
+Ans--
+there are several but most commonly we use
+GET: Used to retrieve data from the server. It should be used for safe and idempotent 
+operations, meaning it should not have any side effects on the server.
+POST: Used to submit data to be processed by the server. It is often used for creating 
+new resources or performing non-idempotent actions like submitting a form.
+PUT: Used to update existing data on the server. It should be idempotent, meaning 
+multiple identical requests will have the same effect as a single request.
+PATCH: Similar to PUT, but it only updates the specified fields of the resource, rather 
+than replacing the entire resource. It should also be idempotent.
+DELETE: Used to remove data or resources from the server. It should be idempotent, so 
+multiple identical requests will have the same effect as a single request.
+81. In SQL what is primary key and foreign key?
+Ans--
+.Primary Key: In SQL, a primary key is a column or a set of columns that uniquely identify 
+each row in a table. It enforces the uniqueness and non-nullity of the values in the 
+specified columns, making it a unique identifier for each record. Only one primary key 
+can exist per table.
+Foreign Key: In SQL, a foreign key is a column or a set of columns that establishes a link 
+or relationship between two tables. It creates a reference to the primary key in another 
+table, allowing data in one table to be related to data in another. The foreign key 
+ensures referential integrity, meaning it maintains the consistency and validity of the 
+relationships between related tables.
+82. What are middlewares and what does next() function do?
+Ans—simply it is a response and request cycle which handle different http methods
+.Middlewares in the context of web development (such as in Node.js with Express.js) are 
+functions that are executed in between processing an incoming HTTP request and 
+generating a response. They add additional functionality to the request-response cycle.
+next() is a function used in middleware to pass control to the next middleware function 
+in the chain. When a middleware function is done with its task, it calls next()
+83. Which module is used to read and write operations in a file?
+Ans- fs 
+84. What are web servers? How are they different from your laptop.
+Ans--
+Web servers are software applications that run on a computer and are responsible for 
+processing incoming HTTP requests from clients (typically web browsers) and serving 
+responses back to them. They handle the communication between clients and the web 
+application or website hosted on the server.
+85. What are classes in javascript?
+ans- A class is a template for creating objects.
+Eg-- class Animal {
+ constructor(name) {
+ this.name = name;
+ }
+ makeSound() {
+ console.log(`${this.name} makes a sound.`);
+ }
+}
+const cat = new Animal("Cat");
+cat.makeSound(); // Output: Cat makes a sound.
+86. What are constructors? what does super() do in js?
+Ans--
+Constructors are special methods in classes that are automatically called when creating 
+new instances of the class.
+super() is used to call the constructor of the parent class and set up the inheritance 
+relationship between parent and child classes.
+87. What are destructors? when are they called?
+Ans--
+memory management and resource deallocation are handled automatically by the 
+garbage collector. When an object is no longer referenced by any part of the program, it 
+becomes eligible for garbage collection. The JavaScript engine automatically identifies 
+and deallocates the memory used by objects that are no longer needed.
+So, in short, destructors are not explicitly called in JavaScript because the language relies 
+on automatic garbage collection to manage memory and resource deallocation.
+88. Explain garbage collection in js.? When is a variable garbage collected?
+Ans--
+Garbage collection in JavaScript is the process of automatically reclaiming memory 
+occupied by objects that are no longer reachable or in use by the program. It is a 
+mechanism to manage memory efficiently and avoid memory leaks.
+89. How do you do error logging in your application? (Say you use sentry , Watch this 
+video to understand)
+Ans--
+comnly we use try catch ... but benifits of third party error loging is error aggregation, 
+tracking, and alerts, which help in better understanding and debugging errors in a 
+production application.
+90. What is abstraction and encapsulation?
+Ans--
+Abstraction=== Abstraction is the process of simplifying complex systems by only 
+exposing essential and relevant details to the outside world while hiding unnecessary 
+implementation details. It allows developers to focus on what an object does rather than 
+how it does it.
+Encapsulation=== Encapsulation is a concept in object-oriented programming where 
+the data (properties) and the methods (functions) that operate on the data are bound 
+together in a single unit called a class. It restricts direct access to the internal state of the 
+object and provides controlled access through methods, ensuring data integrity and 
+preventing unintended modifications.
+91. What is a jwt token ? How do you create a jwt token?
+Ans--
+to authentication purpose, we can create usin jwt.sign method.
+92. Explain the flow of login and authentication? How does the backend identify the 
+user?
+Ans--
+when user login successfully one token and objet id and jwt token is generated it keeps 
+user loged in when this token dostroys user session will be expired.
+93. When you create a jwt token , how do you expire it after a certain amount of time?
+Ans--
+i will store the jwt in cookies and give specific time to expiry.
+94. Explain the steps for deploying the code to AWS?
+Ans--
+push code to git and then create EC2 instance and connect with the ssh key with cmd 
+and clone the git repo and install all required packeges and run it using PM2 ..
+95. What all files will you add to .gitignore file?
+Ans--
+node_module and .env or sectate files
+96. What is the use of pm2 ? What advantage does it give?
+Ans--
+for long time running of applictin . advantages are when our system shut down but our 
+service is live.
+97. What are the different pm2 commands that you have used?
+Ans--
+pm2 stop, pm2 start, pm2 log etc....
+98. What is the use package json file?
+Ans--
+it keeps all detail of project or appliacation.
+99. What is the use of packagelock.json?Why do we even need it?
+Ans-- package-lock.json is a file automatically generated in Node.js projects when you 
+use npm (Node Package Manager) to manage dependencies. It is used to lock down the 
+exact versions of dependencies that are installed in your project, ensuring consistent 
+and reproducible installations across different environments.
+100. What is the difference between dependencies and devdependencies in 
+package.json? When to use what?
+Ans-- Dependencies: "dependencies" are packages that are required for the application 
+to run correctly in the production environment. These packages are necessary for the 
+application's functionality and are installed when someone installs your application as a 
+dependency.
+DevDependencies: "devDependencies" are packages that are only required during 
+development and testing of the application. They are not necessary for the application 
+to run in the production environment. These packages are typically development tools, 
+testing frameworks, or other utilities that are used during the development process but 
+not needed for the final deployed application.
+****** "dependencies" are essential for the application to function correctly, while 
+"devDependencies" are only needed during development and are not included in the 
+production deployment.
+101. What is a first class function in Javascript?
+Ans- A first-class function in JavaScript means functions are treated as first-class citizens, 
+allowing them to be assigned to variables, passed as arguments, and returned from other 
+functions.
+102. What is Node.js and how it works?
+Ans--.Node.js is an open-source, server-side runtime environment built on Chrome's V8 
+JavaScript engine. It allows developers to run JavaScript code outside the browser, on 
+the server. Node.js follows an event-driven, non-blocking I/O model, making it efficient
+and scalable for handling concurrent requests. It uses the event loop to handle 
+asynchronous operations and provides access to various built-in modules for 
+developing server-side applications and APIs.
+103. What are some commonly used timing features of Node.js?
+Ans-- setTimeout(): Executes a callback function after a specified delay, represented in 
+milliseconds. It runs the callback function once.
+setInterval(): Executes a callback function repeatedly at a specified interval, represented 
+in milliseconds.
+setImmediate(): Schedules a callback function to be executed immediately after the 
+current phase of the event loop, before any I/O operations.
+process.nextTick(): Executes a callback function immediately after the current operation 
+is completed, but before any I/O events. It runs the callback at the highest priority in the 
+event loop.
+104. What is fork in node JS?
+Ans--
+In Node.js, the term "fork" refers to a method of creating child processes. When you fork 
+a process, you create a new child process that is a copy of the parent process. The child 
+process runs independently but can communicate with the parent process using interprocess communication (IPC) mechanisms.
+105. How many types of API functions are there in Node.js?
+Ans-- Core API Functions: These are the built-in functions provided by Node.js itself. 
+Examples include the fs (file system), http (HTTP server/client), path (file path), os 
+(operating system), and events (event emitter) modules. Core API functions are available 
+without the need for additional installations.
+Third-Party API Functions: These are functions provided by external modules or 
+packages that are not part of the core Node.js runtime. To use third-party API functions, 
+you need to install the respective packages using a package manager like npm. 
+Examples include express (web framework), axios (HTTP client), lodash (utility library), 
+and many others.
+106. If Node.js is single threaded then how does it handle concurrency
+Ans-- Event Loop: The event loop is the core of Node.js, responsible for handling events 
+and callbacks. It keeps checking the event queue for pending events or tasks.
+Callbacks: When an I/O operation completes, it places the corresponding callback 
+function into the event queue.
+Execution Stack: Node.js processes the callback functions from the event queue one by 
+one. Each function is executed on the same main thread, which ensures that there's no 
+need for thread synchronization.
+107. What is node.js streams?
+AnsNode.js streams are a powerful feature that allows you to efficiently handle and process 
+data, whether it is being read from a source or written to a destination. 
+108. What are node.js buffers?
+Ans-- Node.js buffers are temporary chunks of memory used to store raw binary data. 
+109. Describe the 5 exit codes of Node.js?
+Ans--
+1(Success): The process exited successfully without any errors.
+1 (Uncaught Fatal Exception): The process exited due to an uncaught exception. When 
+an unhandled exception occurs in the application, Node.js will terminate the process 
+with exit code 1.
+2 (Explicitly Terminated): The process exited explicitly using the process.exit() method. A 
+developer can use this method to forcefully terminate the process with a specific exit 
+code.
+3 (Internal JavaScript Parse Error): The process exited due to a JavaScript parse error. 
+This could happen if the Node.js application encounters a syntax error in the JavaScript 
+code.
+4 (Internal JavaScript Evaluation Failure): The process exited because a JavaScript 
+evaluation failed. This could happen if the Node.js application runs into an error during 
+the evaluation of a JavaScript expression.
+110. Enhancing Node.js performance through clustering. How can you do this via 
+forking?Can you write the code?
+Ans-- In Node.js, you can enhance performance through clustering by leveraging the 
+built-in cluster module, which allows you to create multiple child processes (forks) that 
+share the same server port and distribute incoming client requests among them. This 
+enables your application to utilize multiple CPU cores effectively.
+Forking in Node.js can enhance performance by creating child processes that take 
+advantage of multiple CPU cores
+Eg--
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+if (cluster.isMaster) {
+ for (let i = 0; i < numCPUs; i++) {
+ cluster.fork();
+ }
+} else {
+ http.createServer((req, res) => {
+ res.writeHead(200);
+ res.end('Hello, World!\n');
+ }).listen(8000);
+}
+In this simple example, the master process forks child processes for each CPU core, 
+distributing the load and improving performance by handling incoming HTTP requests.
+111. What is the difference between fork() and spawn() methods in Node.js?
+Ans--
+fork() is used to create child processes that communicate with the parent process using 
+IPC, while spawn() is used to create child processes with direct access to stdio streams for 
+communication.
+The major difference is that fork() is a special case of spawn() designed for creating 
+Node.js child processes that communicate through IPC (Inter-Process Communication).
+112. What are some of the flags used in the read/write operations in files?
+Ans-- 'r': Open the file for reading (default).
+'r+': Open the file for reading and writing.
+'w': Open the file for writing. Creates a new file if it doesn't exist, or truncates (empties) 
+the file if it does exist.
+113. What is a reactor and proactor pattern in Node.js? Watch this video and explain in 
+your own words?
+Ans--
+The reactor pattern is a design pattern where the program handles asynchronous I/O by 
+using an event loop (like in Node.js), while the proactor pattern is a design pattern where 
+I/O operations are initiated and handled by the system, freeing the program from direct 
+involvement in I/O operations.
+114. What is the purpose of NODE_ENV? Why do we even need the different environments like 
+production and staging?
+Ans--
+The NODE_ENV environment variable in Node.js is used to define the execution 
+environment of the application. Its purpose is to provide a way for developers to 
+differentiate between different environments, such as development, production, or 
+testing, and adjust the application's behavior accordingly.
+115.for more refere this links
+part 1--- https://www.mygreatlearning.com/blog/nodejs-interview-questions
+expressjs question part 2-----
+https://www.javatpoint.com/expressjs-interview-questions
+expressjs question part 3-----
+https://interviewprep.org/top-25-express-js-interview-question-and-answers/
+expressjs question part 4-----
+https://medium.com/appsyoda-dev/important-interview-questions-for-expressjs-node-jsd8b23bad64a9
+116—mongodb question
+116. What are some of the advantages of MongoDB?
+Ans-- MongoDB supports field, range-based, string pattern matching type queries. for 
+searching the data in the database 
+• MongoDB support primary and secondary index on any fields
+• MongoDB basically uses JavaScript objects in place of procedures
+• MongoDB uses a dynamic database schema
+• MongoDB is very easy to scale up or down.
+117. What is a Document in MongoDB?
+Ans--
+Document in MongoDB is an ordered set of keys with associated values. It is represented by a map, 
+hash, or dictionary.
+117. What are Databases in MongoDB?
+Ans-- MongoDB groups collections into databases. MongoDB can host several databases, 
+each grouping together collections
+118. How do you Scale up MongoDB to handle millions of users?
+Ans-- The document-oriented data model of MongoDB makes it easier to split data 
+across multiple servers. Balancing and loading data across a cluster is done by 
+MongoDB. It then redistributes documents automatically.
+The mongos acts as a query router, providing an interface between client applications 
+and the sharded cluster.
+119. What are the different kinds of indexing in Nosql database? Explain each one of 
+them in your own words.
+Ans--
+indexing is a technique used to optimize the retrieval of data by creating data structures 
+that allow the database to quickly locate the information you're querying for. Different 
+types of indexing strategies are used in NoSQL databases to cater to various data 
+models and query patterns. Here are some common types of indexing:
+Single-field Indexing:
+Single-field indexing involves creating an index on a single attribute or field in a 
+document.
+Compound indexing involves creating an index on multiple fields within a document.
+It's useful when you often query based on a combination of attributes.
+The order of fields in the compound index matters, as the index uses a hierarchical 
+structure.
+Text indexing is specific to databases that support full-text search. It's used for efficient 
+text-based searches.
+Text indexes tokenize text and create an index on individual words, enabling quick 
+search and relevance ranking.
+Geospatial indexing is used to optimize queries that involve location-based data.
+It allows efficient querying of nearby locations, polygons, and other spatial operations.
+Bitmap indexing is used in databases that store categorical data with limited possible 
+values.
+It creates a bitmap for each unique value in the field, indicating the presence or absence 
+of that value in each document.
+Time-series indexing is used for databases that store time-based data, such as events, 
+logs, or sensor readings.
+It optimizes queries that involve specific time ranges or intervals.
+120. How does sharding work in NoSql . Explain it in details in your own words.
+Ans--
+Sharding in NoSQL databases involves breaking a large dataset into smaller pieces called 
+"shards" and distributing these shards across multiple machines or servers. Each shard 
+contains a subset of the data, and the distribution is usually based on a shard key. This 
+allows for parallel processing and efficient storage of data, improving performance and 
+scalability. When a query is executed, the system routes it to the appropriate shard(s), 
+processes the results, and then aggregates them if needed, providing a seamless experience 
+for users and maintaining high performance even as the dataset grows.
+121. How do you form relations in NOSql like sql?
+Ans--
+In NoSQL databases like MongoDB, relations are typically managed through embedding or 
+referencing.
+• Embedding: You can embed related data within a single document. For example, in 
+a blog post document, comments can be embedded directly.
+• Referencing: You can create separate documents for related data and use 
+references (IDs or keys) to link them. For example, you might have separate "user" 
+and "post" documents, with the user's ID referenced in the post document.
+Unlike SQL databases, which use joins to fetch related data from separate tables, NoSQL 
+databases often use denormalization (embedding or referencing) to achieve efficient data 
+retrieval.
+122. What does replica set mean in Mongodb?
+Ans--
+.A replica set in MongoDB is a group of MongoDB servers that work together to provide
+high availability and data redundancy. It consists of a primary server for write operations 
+and one or more secondary servers that replicate data from the primary to ensure fault 
+tolerance and data availability.
+123. For more soureses refer
+mongodb part 1---------- https://www.javatpoint.com/mongodb-interview-questions
+mongodb part 3----------
+https://www.mygreatlearning.com/blog/mongodb-interview-question-and-answers/
+mongodb part 4----------
+https://github.com/Devinterview-io/mongodb-interview-questions
+mongodb part 5---------- https://testbook.com/interview/mongodb-interview-questions
+124—for Socket.io refer this
+Socket.io part 1----
+https://climbtheladder.com/socket-io-interview-questions/#:~:text=20%20Socket.IO%20 
+Interview%20Questions%20and%20Answers%201%201.,opinion%20on%20Socket.IO%2
+0security% 20issues%3F%20...%20More%20items
+Socket.io part 2---- https://www.fullstack.cafe/blog/websockets-interview-questions
+125-for rest api Rest Api API
+set 1.0----- https://www.codingninjas.com/studio/library/rest-api-interview-questions 
+API set 1.1 -----
+https://www.indeed.com/career-advice/interviewing/rest-api-interviewquestions#:~:text=REST%20API%20experience%20and%20background%20questions%2
+0an%20interviewer,are%20your%20weaknesses%20with%20REST%20API%3F%20More%
+20items
+API set 2----- https://www.javatpoint.com/api-testing-interview-questions API set 3-----
+https://www.mygreatlearning.com/blog/rest-api-interview-questions/
+126.. jwt
+refer project --- EXPENSE TRACKER APPLICATION
+127.bycrypt
+refer project --- EXPENSE TRACKER APPLICATION
+128.cookies
+https://programmingcrackers.blogspot.com/p/cookies-1.html
+129.express- session
+https://codeburst.io/how-do-express-sessions-work-c465e0488af4
+130.Razor pay
+refer ----- project --- EXPENSE TRACKER APPLICATION
+131.Aws (S3, EC2, elastic IP)
+refer ----- project --- EXPENSE TRACKER APPLICATION
+132. NGINX
+refer ----- project --- EXPENSE TRACKER APPLICATION
+133.NodeMailer
+refer ----- project --- EXPENSE TRACKER APPLICATION
+134.git and github
+refer ----- project --- EXPENSE TRACKER APPLICATION
+135.my practies about projects
+express: Express is a popular web application framework for Node.js. It simplifies 
+the process of building web servers and handling HTTP requests and responses. With 
+Express, you can define routes, handle middleware, and manage various aspects of 
+web applications.
+cors: CORS stands for Cross-Origin Resource Sharing. It is a security feature 
+implemented in web browsers to prevent unauthorized access to resources hosted on a
+different domain. The cors package for Node.js allows you to enable Cross-Origin 
+Resource Sharing for your server, which is useful when you want to make AJAX 
+requests from a web page hosted on a domain to a server hosted on a different 
+domain.
+dotenv: The dotenv package is used to read environment variables from a .env file 
+and make them accessible in your Node.js application. Environment variables are 
+often used to store sensitive information or configuration data, and the .env file 
+keeps them separate from the codebase.
+mongoose: Mongoose is an Object-Document Mapping (ODM) library for Node.js and 
+MongoDB. It provides a simple and schema-based solution for modeling and 
+interacting with MongoDB databases. Mongoose allows you to define data schemas, 
+create models, and perform database operations using JavaScript objects instead of 
+raw MongoDB queries
+path: The path module is a core Node.js module that provides utilities for working 
+with file paths and directory paths. It is commonly used to manipulate file paths 
+in a cross-platform way.
+body-parser: body-parser is a middleware for Express that parses incoming request 
+bodies and makes the data available in req.body. It can handle different types of 
+request bodies, such as JSON, URL-encoded, and multipart data, and convert them 
+into usable JavaScript objects.
+cookie-parser: The cookie-parser package is another middleware for Express that 
+helps parse and handle HTTP cookies from incoming requests. It takes the raw cookie
+header and converts it into a JavaScript object, making it easier to work with 
+cookies in your application.
+req.body= it access the data from body when user enters the data.
+req.params=it is an obj of req object that contain rout parameter and It extracts 
+the expense ID from the request parameters.
+req.user.id in expence controller==req.user is seted by authentication middleware. 
+using jsonwebtoken when user is loged in. the auth middleware extract user 
+information from token and then sets the authenticated user's information on the 
+req.user object.The createexpence and getexpences route handlers in the code 
+snippet use req.user.id to get the user ID of the authenticated user. This user ID 
+is then used to associate the expenses with the corresponding user, ensuring that 
+each user can only access and manage their own expenses. the req.user object has 
+been populated by a user authentication middleware, req.user.id refers to the user 
+ID of the authenticated user.
+generateauthtoken method:This method is defined on a user schema 
+(usersignupSchema)
+and is responsible for generating a JWT when a user signs up or logs in. It signs a
+JWT with the user's _id (user ID) and returns the generated token. 
+JWT Generation:The jwt.sign function from the jsonwebtoken library is used to 
+generate a JWT. It takes two main arguments: the payload (data to be included in 
+the token) and the secret key used for signing the token. In this case, the payload is an 
+object containing only the user's _id as data, and the SECRET_KEY is stored 
+in an environment variable (process.env.SECRET_KEY).
+The hash function is a middleware function executed before saving a user's data to 
+the database. It hashes the user's password using the bcrypt library. The 
+bcrypt.hash function takes two arguments: the data to be hashed (in this case, the 
+user's password) and the number of salt rounds (10 in this case).Whenever a new 
+user signs up or an existing user updates their password, this middleware will be 
+triggered and hash the new password before saving it to the database.
+req.query==used for getting query strin value.
+req.params.id==the string that uniquily identifies a restful resources within your 
+application. it found in the URl after the resorce loaded.
+findall==it is mongoose method which find the table of rows and return the array of
+object.
+.save==used to save document into a db.
+mongoose.connect --- it used to coonect with mongodb it is method it takes 
+connection string
+useNewUrlParser: true:
+This option is used to enable the new MongoDB connection string parser. It's 
+recommended to set this option to true when connecting 
+to a MongoDB database using Mongoose. The new parser handles MongoDB 
+connection strings more efficiently and can prevent certain deprecation warnings 
+that might occur with older parsers.
+useUnifiedTopology: true:
+This option is used to enable the new unified topology engine in the MongoDB driver. 
+Setting this option to true is also recommended because it 
+uses a more modern and efficient engine for handling the connections and topology of 
+the MongoDB server.
+136. In group chat app ---- need revision go trough project
+137. HR ROUND
+Refer
+25 Common Job Interview Questions and Answers - Great Learning 
+(mygreatlearning.com)
+139. JS 100 output question youtube- code-stepbystep
+138. DSA 100 question- refer my notes---(arrays, string, pattern) using js ...
+1.Given an integer array nums of length n, you want to create an array ans of length 2n 
+where ans[i] == nums[i] and 
+ans[i + n] == nums[i] for 0 <= i < n (0-indexed).
+Specifically, ans is the concatenation of two nums arrays.
+Return the array ans.
+Concatinate array..
+Example 1:
+Input: nums = [1,2,1]
+Output: [1,2,1,1,2,1]
+or 
+merge array
+Solution:--
+let a=[1,2,1]
+console.log([...a,...a])
+----------------------------------------------------------------------------
+2.print duplicate numbers in array or string
+solution--
+let arrnum=[1,2,8,7,5,6,6,8]
+let dup=arrnum.filter((ele,index,arr)=>arr.indexOf(ele)!==index)
+console.log(dup);
+------------------------------------------------------------------------------
+3.if the input is not given in string or in array
+sol----
+a.toString().split("")--for array give nospace if dont want no coma like split();
+a.toString()-----for string
+a.join("") -----to join
+------------------------------------------------------------------------------
+4.print the non duplicate array or string
+Sol--
+let a="121"
+let b=new Set(a)
+console.log(b);
+----------------------------------------------------------------------------------
+5.double the array element 
+Sol--
+let a=[1,2,4,5]
+let b=a.map((ele)=>{
+return ele*2
+})
+console.log(b);
+------------------------------------------------------------------------------------
+6. def prime number ==a whole number greater than 1 that cannot be exactly divided by 
+any whole number other than itself and 1 (e.g. 2, 3, 5, 7, 11)
+print the prime number in array
+Sol--
+let a=[1,2,3,4,5,6] 
+function isprime(num){
+for(let i=2; i<2; i++)
+if(num%i===0)
+return false;
+return num!==1;
+}
+let primearr=a.filter(isprime)
+console.log(...primearr)
+--------------------------------------------------------------------------------------------
+7.find min in array 
+Sol--
+let arr=[3,2,1,5,6,7,8];
+let arr1=Math.min(...arr);
+console.log(arr1);
+-----------------------------------------------------------------------------------------------
+8. find max in array
+Sol--
+let arr=[3,2,1,5,6,7,8];
+let arr1=Math.max(...arr);
+console.log(arr1); 
+------------------------------------------------------------------------------------------------
+9.reduce the array or set the length of array
+Sol--
+let arr=[3,2,1,5,6,7,8,9,10];
+arr.length=5;
+console.log(arr);
+-----------------------------------------------------------------------------------------------
+10.sum of array or add all cell in element in array
+Sol--
+let arr=[3,2,1,5,6,7,8,9,10];
+let sum=arr.reduce((x,y)=>x+y);
+console.log(sum);
+------------------------------------------------------------------------------
+11.swap value using destructure 
+Sol--
+let x=4, y=10;
+[x,y]=[y,x];
+console.log(x,y);
+----------------------------------------------------------------------------
+12.convert str to array
+Sol--
+let str="Asif"
+console.log(str.split());
+-------------------------------------------------------------------------
+13.replace character 
+Sol--
+let str="hello, how are you";
+console.log(str.replace('h',"_"))
+-------------------------------------------------------------------------
+14.get the sub string
+Sol--
+let str="hello, how are you";
+console.log(str.substring(0,5)); //O/P=hello
+------------------------------------------------------------------------
+15. check array or string palidrome or not
+Sol--
+let arr=121
+let arr1=arr.toString().split("").reverse().join("")
+if(arr==arr1){
+console.log('true');
+}
+else{
+console.log('false')
+}
+----------------------------------------------------------------------------------
+16. check anagram or not means have same character or not
+Sol--
+let str='anagram';
+let str1='nagaram';
+let str2=str.split("").sort().join("")==str1.split("").sort().join("");
+console.log(str2)
+-------------------------------------------------------------------------------
+17.remove given any word in the string 
+Sol--
+let str="hello, how are you";
+console.log(str.substring(5, str.length)); //O/P=removes the hello
+-------------------------------------------------------------------------
+18.remove the last substring
+Sol--
+let str="hello, how are you";
+console.log(str.substring(0,str.length-3)); //O/P--removes last you
+------------------------------------------------------
+19. remove the space from str
+Sol--
+let str=" hello ";
+console.log(str.trim);
+------------------------------------------------------------------------------------------
+20. add element at the end of array
+Sol--
+let arr=[1,2,3,4]
+arr.push(5)
+console.log(arr)
+-----------------------------------------------------------------------------
+21.add element at first of array
+Sol--
+let arr=[1,2,3,4];
+arr.upshift(0);
+console.log(arr)
+--------------------------------------------------------------------------
+22.print the even number
+Sol--
+let a="2"
+if(a%2==0){
+console.log("true")
+}
+else{
+console.log("false")
+}
+or
+let a = [1, 2, 3, 4, 5, 6];
+for (let i = 0; i < a.length; i++) {
+ if (a[i] % 2 === 0) {
+ console.log(a[i]);
+ }
+}
+-------------------------------------------------------------------------
+22.print the add number
+Sol--
+let a="3"
+if(a%2!==0){
+console.log("true")
+}
+else{
+console.log("false")
+}
+or
+let a = [1, 2, 3, 4, 5, 6];
+for (let i = 0; i < a.length; i++) {
+ if (a[i] % 2 !== 0) {
+ console.log(a[i]);
+ }
+}
+------------------------------------------------------------------
+23. DElete element from array
+Sol--
+let a = [1, 2, 3, 4, 5, 6];
+a.splice(0,2);
+console.log(a)//o/p---3,4,5,6
+---------------------------------------------------------------------
+24. find common element from both 2 or more array
+Sol--
+let arr1 = [1, 2, 3, 4, 5, 6];
+let arr2 = [1, 2, 3, 8, 9, 6];
+let arr3= [1,0,10]
+let 
+commonelement=arr1.filter((element)=>arr2.includes(element)&&arr3.includes(element)
+);
+console.log(commonelement);
+//first use filter method then includes method for all other arrays
+----------------------------------------------------------------------------------
+25. minimum repeated element in array
+Sol--
+let arr1 = [1, 2, 3, 4, 5, 6];
+let arr2 = [1, 2, 3, 8, 9, 6];
+let arr3= [1,0,10]
+let 
+commonelement=arr1.filter((element)=>arr2.includes(element)&&arr3.includes(element)
+);
+console.log(Math.min(...commonelement))
+------------------------------------------------------------------------------------------
+26. maximum repeated element in array
+Sol--
+let arr1 = [1, 2, 3, 4, 5, 6];
+let arr2 = [1, 2, 3, 8, 9, 6];
+let arr3= [1,0,10]
+let 
+commonelement=arr1.filter((element)=>arr2.includes(element)&&arr3.includes(element)
+);
+console.log(Math.max(...commonelement))
+-------------------------------------------------------------------------------------------
+27.find the missing number in array
+Sil--
+let arr = [1, 2, 3, 8, 9, 6];
+let sortarr = arr.sort((a, b) => a - b);
+// Now, create a new array with the range of numbers from the minimum to the maximum 
+in 'sortarr'
+let fullRange = Array.from({ length: sortarr[sortarr.length - 1] - sortarr[0] + 1 }, (_, i) => i + 
+sortarr[0]);
+let missingNums = fullRange.filter(num => !sortarr.includes(num));
+console.log(missingNums);
+----------------------------------------------------------------------------------------
+28.find 2nd largest element in array
+Sol--
+let arr = [1, 2, 3, 8, 9, 6];
+let sortarr = arr.sort((a, b) => a - b);
+let arr2=arr.reverse()
+let secondbig=arr2[1];
+console.log(secondbig);
+-----------------------------------------------------------------------------------------------
+29.find 2nd mimimum in array
+Sol--
+let arr = [1, 2, 3, 8, 9, 6];
+let sortarr = arr.sort((a, b) => a - b);
+let secondsmall=sortarr[1];
+console.log(secondsmall);
+///continue all same for 3rd minor max ao any value
+------------------------------------------------------------------------------------------
+30.Sort in accending order
+Sol--
+let arr = [1, 2, 3, 8, 9, 6];
+let sortarr = arr.sort((a, b) => a - b);
+console.log(sortarr);
+------------------------------------------------------------------------------------------
+31.sort in desending order
+Sol----
+let arr = [1, 2, 3, 8, 9, 6];
+let sortarr = arr.sort((a, b) => a - b);
+let arr2=sortarr.reverse()
+console.log(arr2);
+-------------------------------------------------------------------------------------------
+32.suffle the array
+question
+Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+Return the array in the form [x1,y1,x2,y2,...,xn,yn]
+sol--
+function shuffleArray(nums, n) {
+ let result = [];
+ // Use the 'flatMap' method to interleave the elements from the two halves
+ result = nums.slice(0, n).flatMap((x, i) => [x, nums[i + n]]);
+ return result;
+}
+let nums = [2, 5, 1, 3, 4, 7];
+let n = 3;
+let output = shuffleArray(nums, n);
+console.log(output);
+---------------------------------------------------------------------------------------------
+33.Kids With the Greatest Number of Candies
+There are n kids with candies. You are given an integer array candies, where each 
+candies[i] represents the number 
+of candies the ith kid has, and an integer extraCandies, denoting the number of extra 
+candies that you have.
+Return a boolean array result of length n, where result[i] is true if, after giving the ith kid all 
+the extraCandies, 
+they will have the greatest number of candies among all the kids, or false otherwise.
+Note that multiple kids can have the greatest number of candies.
+Input: candies = [2,3,5,1,3], extraCandies = 3
+Output: [true,true,true,false,true] 
+Explanation: If you give all extraCandies to:
+- Kid 1, they will have 2 + 3 = 5 candies, which is the greatest among the kids.
+- Kid 2, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
+- Kid 3, they will have 5 + 3 = 8 candies, which is the greatest among the kids.
+- Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among the kids.
+- Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
+solution--
+function kidsWithCandies(candies, n) {
+ // Find the maximum number of candies among all kids
+ const maxCandies = Math.max(...candies);
+ 
+ // Use the 'map' method to check if each kid can have the greatest number of candies after 
+getting extraCandies
+ return candies.map(candy => candy + extraCandies >= maxCandies);
+}
+// Test example
+let candies = [2, 3, 5, 1, 3];
+let n = 3;
+let result = kidsWithCandies(candies, extraCandies);
+console.log(result); // Output: [true, true, true, false, true]
+----------------------------------------------------------------------------------------------
+34.Number of Good Pairs
+Given an array of integers nums, return the number of good pairs.
+A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+eg--Input: nums = [1,2,3,1,1,3]
+Output: 4
+Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
+solution--
+function numIdenticalPairs(nums) {
+ return nums.reduce((count, num, index) => {
+ let occurrences = nums.slice(index + 1).filter(n => n === num).length;
+ return count + occurrences;
+ }, 0);
+}
+// Test example
+let nums = [1, 2, 3, 1, 1, 3];
+let result = numIdenticalPairs(nums);
+console.log(result); // Output: 4
+-----------------------------------------------------------------------------------------------
+35.1365. How Many Numbers Are Smaller Than the Current Number.
+Given the array nums, for each nums[i] find out how many numbers in the array are 
+smaller than it. That is, for each nums[i] you have to 
+count the number of valid j's such that j != i and nums[j] < nums[i].
+Return the answer in an array.
+eg==Input: nums = [8,1,2,2,3]
+Output: [4,0,1,1,3]
+Explanation: 
+For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3). 
+For nums[1]=1 does not exist any smaller number than it.
+For nums[2]=2 there exist one smaller number than it (1). 
+For nums[3]=2 there exist one smaller number than it (1). 
+For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
+solution--
+function smallerNumbersThanCurrent(nums) {
+ return nums.map((num, index) => {
+ return nums.filter((n, i) => n < num && i !== index).length;
+ });
+}
+// Test example
+let nums = [8, 1, 2, 2, 3];
+let result = smallerNumbersThanCurrent(nums);
+console.log(result); // Output: [4, 0, 1, 1, 3]
+-----------------------------------------------------------------------------------------------
+36.Given an integer array nums, return true if any value appears at least twice in the array, 
+and return false if every element is distinct.
+solution--
+const nums1 = [1, 2, 3, 4, 5];
+const numSet1 = new Set(nums1);
+const containsDuplicate1 = numSet1.size !== nums1.length;
+console.log(containsDuplicate1); // Output: false (no duplicates)
+----------------------------------------------------------------------------------------------
+37.Row with max 1s
+Given a boolean 2D array of n x m dimensions where each row is sorted. Find the 0-based 
+index of the first row that has the maximum number of 1's.
+eg-Input: 
+N = 4 , M = 4
+Arr[][] = {{0, 1, 1, 1},
+ {0, 0, 1, 1},
+ {1, 1, 1, 1},
+ {0, 0, 0, 0}}
+Output: 2
+Explanation: Row 2 contains 4 1's (0-based
+indexing).
+solution--
+function findMaxOnesRowIndex(matrix) {
+ return matrix.findIndex(row => row.reduce((count, cell) => count + cell, 0) === 
+Math.max(...matrix.map(row => row.reduce((count, cell) => count + cell, 0))));
+}
+// Test example
+let matrix = [
+ [0, 0, 1, 1],
+ [0, 1, 1, 1],
+ [1, 1, 1, 1],
+ [0, 0, 0, 1]
+];
+let index = findMaxOnesRowIndex(matrix);
+console.log(index); // Output: 2 (index of the first row with the maximum number of 1's)
+----------------------------------------------------------------------------------------------
+38.Build Array from Permutation
+Given a zero-based permutation nums (0-indexed), build an array ans of the same length 
+where ans[i] = nums[nums[i]] for each 0 <= i < nums.length and return it.
+A zero-based permutation nums is an array of distinct integers from 0 to nums.length - 1 
+(inclusive).
+Example 1:
+Input: nums = [0,2,1,5,3,4]
+Output: [0,1,2,4,5,3]
+Explanation: The array ans is built as follows: 
+ans = [nums[nums[0]], nums[nums[1]], nums[nums[2]], nums[nums[3]], nums[nums[4]], 
+nums[nums[5]]]
+ = [nums[0], nums[2], nums[1], nums[5], nums[3], nums[4]]
+ = [0,1,2,4,5,3]
+solution--
+function buildArray(nums) {
+ return nums.map(num => nums[num]);
+} 
+// Test example
+let nums = [2, 1, 0, 4, 3];
+let ans = buildArray(nums);
+console.log(ans); // Output: [0, 1, 2, 3, 4]
+------------------------------------------------------------------------------------------------
+39.Add to Array-Form of Integer
+The array-form of an integer num is an array representing its digits in left to right order.
+For example, for num = 1321, the array form is [1,3,2,1].
+Given num, the array-form of an integer, and an integer k, return the array-form of the 
+integer num + k.
+Example 1:
+Input: num = [1,2,0,0], k = 34
+Output: [1,2,3,4]
+Explanation: 1200 + 34 = 1234
+solution----
+function addToArrayForm(num, k) {
+ let numArray = BigInt(num.join(''));
+ numArray += BigInt(k);
+ return numArray.toString().split('').map(Number);
+}
+// Test example
+let num = [1, 3, 2, 1]; // The array-form of integer 1321
+let k = 1234;
+let result = addToArrayForm(num, k);
+console.log(result); // Output: [1, 3, 4, 5, 5]
+----------------------------------------------------------------------------------------------
+40.Transpose Matrix
+Given a 2D integer array matrix, return the transpose of matrix.
+The transpose of a matrix is the matrix flipped over its main diagonal, switching the 
+matrix's row and column indices.
+eg--Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [[1,4,7],[2,5,8],[3,6,9]]
+solution--
+function transpose(matrix) {
+ return matrix[0].map((_, colIndex) => matrix.map(row => row[colIndex]));
+}
+// Test example
+let matrix = [
+ [1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]
+];
+let transposedMatrix = transpose(matrix);
+console.log(transposedMatrix);
+// Output:
+// [
+// [1, 4, 7],
+// [2, 5, 8],
+// [3, 6, 9]
+// ]
+-------------------------------------------------------------------------------------------------
+41.Maximum Subarray
+Given an integer array nums, find the subarray with the largest sum, and return its sum.
+Example 1:
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+solution--
+function maxSubarraySum(nums) {
+ let maxSum = nums[0];
+ let currentSum = nums[0];
+ nums.slice(1).forEach(num => {
+ currentSum = Math.max(num, currentSum + num);
+ maxSum = Math.max(maxSum, currentSum);
+ });
+ return maxSum;
+}
+// Test example
+let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+let maxSum = maxSubarraySum(nums);
+console.log(maxSum); // Output: 6
+------------------------------------------------------------------------------------------------
+42. Search in Rotated Sorted Array
+There is an integer array nums sorted in ascending order (with distinct values).
+Prior to being passed to your function, nums is possibly rotated at an unknown pivot index 
+k (1 <= k < nums.length) 
+such that the resulting array is [nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., 
+nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] 
+might be rotated at pivot index 3 and become [4,5,6,7,0,1,2].
+Given the array nums after the possible rotation and an integer target, return the index of 
+target if it is in nums, or -1 if it is not in nums.
+Example 1:
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+explanation ----return the index of target value
+solution--
+function search(nums, target) {
+ return nums.indexOf(target);
+}
+// Test example
+let nums = [4, 5, 6, 7, 0, 1, 2];
+let target = 0;
+let index = search(nums, target);
+console.log(index); // Output: 4 (index of target element 0 in nums)
+-------------------------------------------------------------------------------------------------43.Best Time to 
+Buy and Sell Stock
+You are given an array prices where prices[i] is the price of a given stock on the ith day.
+You want to maximize your profit by choosing a single day to buy one stock and choosing a 
+different day in the future to sell that stock.
+Return the maximum profit you can achieve from this transaction. If you cannot achieve 
+any profit, return 0.
+Example 1:
+Input: prices = [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+Note that buying on day 2 and selling on day 1 is not allowed because you must buy before 
+you sell.
+solution--
+function maxProfit(prices) {
+ return prices.reduce((maxProfit, price, index) => {
+ const minPrice = Math.min(...prices.slice(0, index + 1));
+ return Math.max(maxProfit, price - minPrice);
+ }, 0);
+}
+// Test example
+let prices = [7, 1, 5, 3, 6, 4];
+let profit = maxProfit(prices);
+console.log(profit); // Output: 5 (buy at 1 and sell at 6)
+------------------------------------------------------------------------------------------------
+44.Given an input string s, reverse the order of the words.
+A word is defined as a sequence of non-space characters. The words in s will be separated 
+by at least one space.
+Example 1:
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+solution---
+let s = "the sky is blue"
+let s1=s.split(" ").reverse().join(" ");
+console.log(s1)
+------------------------------------------------------------------------------------------------
+45.Check if the Sentence Is Pangram
+A pangram is a sentence where every letter of the English alphabet appears at least once.
+Given a string sentence containing only lowercase English letters, return true if sentence is 
+a pangram, or false otherwise.
+Example 1:
+Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
+Output: true
+Explanation: sentence contains at least one of every letter of the English alphabet.
+Example 2:
+Input: sentence = "leetcode"
+Output: false
+sol-----------
+let sentence1 = "the quick brown fox jumps over the lazy dog";
+let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+let isPangram = alphabet.split('').every(letter => sentence1.includes(letter));
+console.log(isPangram); // Output: true (all letters appear at least once)
+------------------------------------------------------------------------------------------------
+46.Maximum Number of Words Found in Sentences
+A sentence is a list of words that are separated by a single space with no leading or trailing 
+spaces.
+You are given an array of strings sentences, where each sentences[i] represents a single 
+sentence.
+Return the maximum number of words that appear in a single sentence.
+Example 1:
+Input: sentences = ["alice and bob love leetcode", "i think so too", "this is great thanks very 
+much"]
+Output: 6
+Explanation: 
+- The first sentence, "alice and bob love leetcode", has 5 words in total.
+- The second sentence, "i think so too", has 4 words in total.
+- The third sentence, "this is great thanks very much", has 6 words in total.
+Thus, the maximum number of words in a single sentence comes from the third sentence, 
+which has 6 words.
+solution---
+let sentences = ["This is a sentence", "I love coding", "Hello world"];
+let maxWords = Math.max(...sentences.map(sentence => sentence.split(' ').length));
+console.log(maxWords); // Output: 4 (maximum words in the sentence "This is a 
+sentence")
+------------------------------------------------------------------------------------------------
+47.Valid Palindrome
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and 
+removing all 
+non-alphanumeric characters, it reads the same forward and backward. Alphanumeric 
+characters include letters and numbers.
+Given a string s, return true if it is a palindrome, or false otherwise.
+Example 1:
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+solution----
+let str1 = "A man, a plan, a canal: Panama";
+// Remove non-alphanumeric characters and convert to lowercase
+let arranged = str1.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+// Create the reversed version of the alphanumeric string
+let reversed = arranged.split('').reverse().join('');
+if(arranged==reversed){
+ console.log("true")
+}
+else{
+ console.log("false")
+}
+--------------------------------------------------------------------------
+48.Count the Number of Consistent Strings
+You are given a string allowed consisting of distinct characters and an array of strings 
+words. 
+A string is consistent if all characters in the string appear in the string allowed.
+Return the number of consistent strings in the array words.
+Example 1:
+Input: allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
+Output: 2
+Explanation: Strings "aaab" and "baa" are consistent since they only contain characters 'a' 
+and 'b'.
+solution--
+let allowed = "abc";
+let words = ["a", "b", "c", "ab", "ac", "bc", "abc"];
+let consistentCount = words.filter(word => {
+ return word.split('').every(char => allowed.includes(char));
+}).length;
+console.log(consistentCount); // Output: 7 (all strings are consistent)
+------------------------------------------------------------------------------------------
+49.Given a string S. For each index i(1<=i<=N-1), erase it if s[i] is equal to s[i-1] in the 
+string.
+Example 1:
+Input:
+S = aabb
+Output: ab 
+Explanation: 'a' at 2nd position is
+appearing 2nd time consecutively.
+Similiar explanation for b at
+4th position.
+solution-------
+let S = "aabb";
+let output = S.split('').filter((char, index) => char !== S[index + 1]).join('');
+console.log(output); // Output: "ab"
+-----------------------------------------------------------------------------------------
+50.Longest Common Prefix
+Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string "".
+Example 1:
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+solution--------
+let strs = ["flower", "flow", "flight"];
+let prefix = strs.reduce((commonPrefix, currentStr) => {
+ let i = 0;
+ while (commonPrefix[i] && currentStr[i] && commonPrefix[i] === currentStr[i]) {
+ i++;
+ }
+ return commonPrefix.slice(0, i);
+});
+console.log(prefix); // Output: "fl"
+----------------------------------------------------------------------------------------
+51.Convert a sentence into its equivalent mobile numeric keypad sequence
+Given a sentence in the form of a string, convert it into its equivalent mobile numeric 
+keypad sequence. 
+simple in mobile key board 1 is empty and other digit have 3 alphabet expect 7 and 9 it 
+have 4
+Input: GEEKSFORGEEKS
+Output: 4333355777733366677743333557777
+Explanation: For obtaining a number, we need to press a number corresponding to that 
+character for a 
+number of times equal to the position of the character. For example, for character E, press 
+number 3 
+two times and accordingly.
+solution----
+let sentence = "Hello World";
+const keypadMap = {
+ 'a': '2', 'b': '2', 'c': '2',
+ 'd': '3', 'e': '3', 'f': '3',
+ 'g': '4', 'h': '4', 'i': '4',
+ 'j': '5', 'k': '5', 'l': '5',
+ 'm': '6', 'n': '6', 'o': '6',
+ 'p': '7', 'q': '7', 'r': '7', 's': '7',
+ 't': '8', 'u': '8', 'v': '8',
+ 'w': '9', 'x': '9', 'y': '9', 'z': '9'
+};
+let keypadSequence = sentence.toLowerCase().split('').map(char => keypadMap[char] || 
+char).join('');
+console.log(keypadSequence); // Output: "43556 96753"
+------------------------------------------------------------------------------------------------
+52.Valid Parentheses
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input 
+string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+Example 1:
+Input: s = "()"
+Output: true
+Example 2:
+Input: s = "()[]{}"
+Output: true
+Example 3:
+Input: s = "(]"
+Output: false
+solution--------
+let s = "()"
+while (s.includes('()') || s.includes('{}') || s.includes('[]')) {
+ s = s.replace('()', '').replace('{}', '').replace('[]', '');
+}
+console.log(s === ''); // Output: true
+-------------------------------------------------------------------------------------
+patterns 
+53.print pattern
+ *
+ **
+ ***
+ ****
+solution---
+for (let i = 1; i <= 4; i++) {
+ console.log('*'.repeat(i));
+}
+-------------------------------------------------------------------------------------
+54.print pattern
+****
+***
+**
+*
+solution---
+for (let i = 4; i >= 1; i--) {
+ console.log('*'.repeat(i));
+}
+-----------------------------------------------------------------------------------
+55.print pattern
+1111
+111
+11
+1
+solution---
+for (let i = 4; i >= 1; i--) {
+ console.log('1'.repeat(i));
+}
+-----------------------------------------------------------------------------
+56.print pattern
+1
+11
+111
+1111
+Solution--
+for (let i = 1; i <= 4; i++) {
+ console.log('1'.repeat(i));
+}
+-------------------------------------------------------------------------------
+57.print pattern
+1
+22
+333
+4444
+sol--
+for (let i = 1; i <= 4; i++) {
+ console.log(String(i).repeat(i));
+}
+58.print pattern
+4444
+333
+22
+1
+sol--
+for (let i = 4; i >= 1; i--) {
+ console.log(String(i).repeat(i));
+}
+----------------------------------------------------------------------
+59.print pattern
+1
+12
+123
+1234
+sol--
+let pattern = "";
+for (let i = 1; i <= 4; i++) {
+ pattern += i;
+ console.log(pattern); 
+}
+----------------------------------------------------------------------
+60.print pattern
+4
+34
+234
+1234
+sol--
+let pattern = '';
+for (let i = 4; i >= 1; i--) {
+ pattern = i + pattern;
+ console.log(pattern);
+}
+--------------------------------------------------------------
+61.print pattern
+1
+2 3
+4 5 6
+7 8 9 10
+sol---
+let num = 1;
+for (let i = 1; i <= 4; i++) {
+ let row = Array.from({ length: i }, () => num++).join(' ');
+ console.log(row);
+}
+---------------------------------------------------------------------------------
+62. Print pattern
+1 2 3 4
+5 6 7
+8 9
+10
+sol--
+let num = 1;
+for (let i = 4; i >= 1; i--) {
+ let row = Array.from({ length: i }, () => num++).join(' ');
+ console.log(row);
+}
+------------------------------------------------------------------------------
+
+63.flatten array
+given a nested array containing integer convort that nested array to single array
+const nestedArray=[1,[2,[3,4],5],6];
+const flatearray=nestedArray.Flate(Infinity);
+console.log(flatarray);
+
+64.find the length of object in js
+ans--
+const obj={a:1,b:2,c:3}
+const obj_len=Object.keys(obj).length;
+console.log(obj_len);
+
+65.rotate the array 
+let a=[1,3,5,3,]
+let b=a.slice(),reverse();
+
+67.find the maximum repeated element in array
+let arr=[1,2,1]
+let maxrepeated=arr.Find((val,index,array)=>array.indexOf(val)!==index);
+console.log(maxrepeated);
+
+68.minimum repeated alement in array
+let arr=[1,1,1,2,2,3]
+let minrepeated=arr.Find(val=>array.indexOf(val)!==array.lastIndexOf(val));;
+console.log(minrepeated);
+
+sort a araay  how close to five
+const arr=[1,2,3,4,6,8]
+const arr1=arr.sort((a,b)=>Math.abs=>Math.abs(a-5)-Math.abs(b-5)||a-b)
+console.log(arr1)
+
